@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<!-- Remove Tap Highlight on Windows Phone IE -->
+	<meta name="msapplication-tap-highlight" content="no" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<title>DaddyToken - The best multi-exchange wallet of ever!</title>
+
+	<!--======================================================
+			CSS Stylesheets
+		======================================================-->
+	<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css'>
+	<link rel='stylesheet' type='text/css' href='css/animate.min.css'>
+	<link rel='stylesheet' type='text/css' href='css/ionicons.min.css'>
+	<link rel='stylesheet' type='text/css' href='css/linea.css'>
+	<link rel='stylesheet' type='text/css' href='css/waves.min.css'>
+	<link rel='stylesheet' type='text/css' href='css/owl.carousel.css'>
+	<link rel='stylesheet' type='text/css' href='css/magnific-popup.css'>
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111022344-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-111022344-1');
+	</script>
+	<style>
+		.top-20 {
+			padding-top: 20px!important;
+		}
+
+		.section-ico-2 {
+
+
+			background: #FAFAFA;
+
+		}
+
+		ul.timeline {
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow-x: auto;
+		}
+
+		ul.timeline .li {
+			transition: all 200ms ease-in;
+		}
+
+		ul.timeline .li .timestamp {
+			margin-bottom: 20px;
+			padding: 0px 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-weight: 400;
+			white-space: nowrap;
+		}
+
+		ul.timeline .li .status {
+			padding: 0px 40px;
+			display: flex;
+			justify-content: center;
+			border-top: 2px solid #D6DCE0;
+			position: relative;
+			transition: all 200ms ease-in;
+		}
+
+		.status h4 {
+			font-weight: 600;
+		}
+
+		.status:before {
+			content: "";
+			width: 25px;
+			height: 25px;
+			background-color: white;
+			border-radius: 25px;
+			border: 1px solid #ddd;
+			position: absolute;
+			top: -15px;
+			left: 42%;
+			transition: all 200ms ease-in;
+		}
+
+		.li.complete .status {
+			border-top: 2px solid #66DC71;
+		}
+
+		.li.complete .status:before {
+			background-color: #66DC71;
+			border: none;
+			transition: all 200ms ease-in;
+		}
+
+		.li.complete .status h4 {
+			color: #66DC71;
+		}
+
+		@media screen and (max-width: 700px) {
+			.timeline {
+				list-style-type: none;
+				display: grid!important;
+			}
+
+			.li {
+				transition: all 200ms ease-in;
+				display: flex;
+				width: inherit;
+			}
+
+			.timestamp {
+				width: 100px;
+			}
+			ul.timeline .li .status{
+				border: none;
+				display: flow-root
+			}
+			ul.timeline .li .status:before {
+
+				left: 0%;
+				top: 30%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<!--======================================================
+			Preloader
+		======================================================-->
+	<div id='preloader'>
+		<div class='loader'>
+			<img src='img/loader.gif' alt>
+		</div>
+	</div>
+
+	<!--======================================================
+			Navbar
+		======================================================-->
+	<nav class='navbar navbar-fixed-top'>
+		<div class='container'>
+
+			<div class='navbar-header'>
+
+				<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#nav-collapse' aria-expanded='false'>
+					<span class='sr-only'>Toggle navigation</span>
+					<span class='icon-bar'></span>
+					<span class='icon-bar'></span>
+					<span class='icon-bar'></span>
+				</button>
+
+				<a href='#' class='navbar-brand'>
+
+					<img class='logo-light' src='img/logo.png' alt>
+					<img class='logo-dark' src='img/logo-dark.png' alt>
+
+				</a>
+
+			</div>
+
+			<div class='collapse navbar-collapse' id='nav-collapse'>
+				<!--<ul class='nav navbar-nav navbar-right hidden-xs'>
+					<li>
+						<a href='https://t.me/DaddyToken'>
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJtSURBVDhPxZRLbxJRGIZnpVV/gYmJlwAtKg2pLUVaOiTGjXHn1pV/QH+Abrpw61K7MmnkTqG0ck9tGmMTGpUYrbHlMghzaSnEjJSbRT7PYQ5lJhKgG32TJ2TOec/Dl2EY6r+EXmdG6DA3Rkf3jO1PdE22Th46JljoGO+3RIWqJSZAB7ReoaP8siXK06Q6OLcjwrm5CO9AwCDMEd56Y4U7S472Di7Mhri4OYwODMlsmN/sKzaFONdMiIOTYgqyVqJQZjqUt9wMsjCIu2sCPN8R4V2hplhHA5mJqhtDIO+fDrDQC3zo4VYR1oUqHLVagPOhWFf2Xud9RCUFPyZTq/mqYTUPcu7EeFj4JoJQbbZFtV9NOCg3AGtt6bKia1jNVVTB3dNESVFTAVYzuZIDDNqER/ED2EBT/ZaGAjzcnlgHXqxJCyhPPhbbfTnYQ5QUpfdlTRP+HGDmE6VjGc5howk7+2XY/1knK1LuvRHafTnYQ5QUNe5lNfrl79DhVoiFp59KsF2owGdOhFKlQVRSqs0WknT7HbCHKCnq4ktmROdjquO+LMh5liiAe7sIhcoR0UlJlOqKHkbnZZT3FOe6h1nWLTEg5/4aCwtbHLyIs/D1R3daa0pU9CQyyl8fR+vJzF3zMCBHv5SF+bcsGH0MTKBplphyW/r4/YGiJ5GdISpltK6MTevOQD8ebAgwib5AvjbmTi8Sxd/B/2GNM7056krDsOD+wJfKeVRQO1OvUBkf6IvakVq84MydIUcHR21Pm1X2pFdlS1ZU9hQc075Oeq84Ur3v4TDBj8klZ2ZU5dg1XranNVddX06RrX8ZivoDB78R8ipRI/AAAAAASUVORK5CYII=">
+						</a>
+					</li>
+					<li>
+						<a href='https://twitter.com/DaddyToken'>
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhP7ZOvT8NAHMUvd1cCFhI8QSIwJIQfQeEQGCwhSAxmggSBQJBgCWaC4Na7koFG4wgJDoLiLyBZezcQQMtb+QZW7rp1BrVP8s26u/deX3otGzI49SygqwqErWkWZSP0z0FouyaUfRTKpLh+EjrZkGG8yJXdJokLxGdcmyt2no3S0g+y0Z7D/jvCssIo+8K13WOX8QRJi0AUkfhBRskyLedg7YT2/oSaFEV2SeaCO251G7gyd5gajKswXnfv/WrsDdn9iLC9jpB7n7lsUKRJdj9odOgz9hx4yF6Cbo3np+szl4zUrwvkLkeqZKnqI8BzviVbb4KGmUFb4wspjDIfKLBCtv4Eys7iVC9gjp0wGhzQAckrgi8LbU87bdxA84nAfVL2Qadj+TupzbMb9D2ddxJf1jw5BqBpJtFkE+HHaFrH7xHXyQ7Tb1OkGPLvMPYFX7hraRO5h/UAAAAASUVORK5CYII=">
+						</a>
+					</li>
+					<li>
+						<a href='https://discord.gg/3nNWUF5'>
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHASURBVDhP7VMxLwRBGF0KP0BEoaBRSEQjEolo/A1CkPATUJClw+4dhYLYmUOpQSJqhehFR04ioRBCIUTIfeO92Tl3t7eHH3Av+TIz773vzezOrldHFYwxDdlI+lZzMuX7ptHRFlyHykwHSvrpc3Rt0JRRMhZocxoqWeAcAXOhlmygZYsj1wicwNynL8jJ6K/hMEZoziPwEONrqI2pVVaPfXn2uYhKhDnTBbGAU0haSK2K/VLIbEuniyoB4mZa038LJ95wUTHily8Paeb/l9xXvFveZNKEnT/AH9BcwSu5I0+9nGetaOl1kQw1i0lDGJlxaiuRtCHknRxHrsljs8lkDzaap2YBw3HSkN2Rbid7MF9bXsmVo7yMlp5kD3xHTkaoktukARut2e82kiHMC44rcE2eekrPjQ20l6Tlq9qAUvKMR674xLhGvZRzP5qWT3tZwZ60lgR5Q52j3Mn+KviUnMV9jtsyLfa02GG2GIT5I+ZLOM06Gi7STkoeHjy++Jg/xZrdYMYGFoF/ehDCiRVj0yX+kmZ/3zTxxnlxHLkmT/0nLO4bcFHVCCLpWNUyHEYy4qhUUKdvede0O6oOwvO+AWEI0huRXYvyAAAAAElFTkSuQmCC">
+						</a>
+					</li>
+					<li>
+						<a href='https://bitcointalk.org/index.php?topic=2570438.0'>
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHNSURBVDhPxVTPLwNBFJ7T7pY48Bc40RMJF6kUf4Y4uDs4OHB34uSPEBpxoC4Sp/4gTZs2hCihJMpF4oY2TvN5b2a23dm2VCR8yZfJvP3et2/fm1nxL0BKeEg5UZmKTPDKe/Po50DKnZEZ90Cm3ToyLnzSvkZMyqw3baTfQx6JXkraCRp1Ir10GyXRY1LbgwVkWLCSTwaA0jhw3KdX3geey4yT+9KYRLvBBMXTGPBRBfKDeuV9SMMVGwsb3MOwGPcrwGtRm73l9PqcAIqjto4o017cWDXBQwkLUV3TRg+rQGURuFsG3s+JZ9SGfktLbds3Vhp8TChoTVnRNy2ONGOP6zpWGrO0lF+Th8I1llRl1hkKChr0TbnC63ngdkFXqSq1B8ZkH2PJn+7FwgJF37RWJqMLoH5jXrLUqiWyj7HsotLG50eApw0dO43bWqJV6Y96Wp7Vsas5S9vSUwYFk0GRom/qT18dsTy1oQIUopaW8u3pM6gfU0GRYrtz+pIEztp9ujdprGzQWU2Exd3dKGfTWLRC3X2+y8Gk3959hvmpbAUTO5ErlDkRManfg+8ytWOPp2oZ8ZQ53qmH3YCPiTxxhvnPr87zpXDMo7+EEJ/oWQ2tV3t8CgAAAABJRU5ErkJggg==">
+						</a>
+					</li>
+				</ul>-->
+				<ul class='nav navbar-nav navbar-right'>
+					<li class='active'>
+						<a href='#intro' data-scroll>Home</a>
+					</li>
+					<li>
+						<a href='#ico' data-scroll>How to contribute</a>
+					</li>
+					<li>
+						<a href='#ico-2' data-scroll>Ico partecipation</a>
+					</li>
+					<li>
+						<a href='#roadmap' data-scroll>Roadmap</a>
+						</li>
+					<li>
+						<a href='#about' data-scroll>About DDT</a>
+					</li>
+					<li>
+						<a href='#features' data-scroll>App features</a>
+					</li>
+					<li>
+						<a href='/DaddyToken_WhitePaper.pdf'>White Paper</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+
+	<!--======================================================
+			Intro Section
+		======================================================-->
+	<section id='intro' class='main-section parallax' data-parallax='scroll' data-image-src='img/bg-main.jpg'>
+
+		<!-- Particles Background -->
+		<div id='particles' class='particle-bg'></div>
+
+		<div class='container'>
+			<div class='row'>
+
+				<div class='col-md-6'>
+
+					<div class='intro-text'>
+
+						<h1 class='wow fadeInUp' data-wow-delay='.2s'>
+							The best multi-exchange wallet ever!
+						</h1>
+
+						<p class='font-alt wow fadeInUp' data-wow-delay='.4s'>Soon in your app store...</p>
+
+						<div class='btns'>
+
+							<form class='newsletter-form' method='post' action='//mc.us17.list-manage.com/subscribe/post?u=4a32a12ba9606c79cfd1e5327&id=ed8646f719'>
+
+								<div class='subscribe-input wow fadeInUp' data-wow-delay='.4s'>
+									<input autocomplete="off" class='txt' type='email' id='newsletter-email' name='email' placeholder='Your Email'>
+									<span></span>
+									<button class='subscribe' type='submit'>Subscribe</button>
+								</div>
+
+								<label for='newsletter-email'></label>
+
+							</form>
+							
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class='col-md-6'>
+
+					<div class='mockup'>
+						<img src='img/mockup1-front.png' class='front wow fadeInDown' data-wow-duration='.7s' data-wow-delay='1.6s' alt>
+						<img src='img/mockup1-back.png' class='back wow fadeInDown' data-wow-duration='.7s' data-wow-delay='1.3s' alt>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!--======================================================
+			Mockup Section
+		======================================================-->
+	<section id='ico' class='mockup-section' class='features-2-section'>
+
+		<div class="container">
+			<div class='section-header text-center'>
+				<h2 class='wow fadeInUp' data-wow-delay='.2s'>How to contribute</h2>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6 text-center">
+
+					<p class="lead">The crowdsale begins on:</p>
+					<p class="h1">December 11
+						<sup>th</sup>, 2017
+						<small>
+							<span class="text-muted">at</span>
+						</small> 00:00 UTC</p>
+					<p class="text-muted">
+						<small></small>
+					</p>
+					<hr>
+					<p>and will run until:</p>
+					<p class="h3">December 30
+						<sup>th</sup>, 2017
+						<small>
+							<span class="text-muted">at</span>
+						</small> 00:00 UTC</p>
+				</div>
+				<div class="col-lg-6">
+					<div class="card card-inverse card-primary">
+						<div class="card-block">
+							<h4 class="card-title">Token contract and generator</h4>
+							<hr class="jumbotron-hr">
+							<p class="card-text text-white">
+								To partecipate in the DADDY ICO, just send as much Ether as you want to the DADDY token/crowdsale contract.
+							</p>
+							<p class="card-text text-white text-center" style="word-break: break-all;">
+
+								<strong class="h4">
+									0xf27f67CCCDD173DE821B51451468ECfee4AC52dA
+								</strong>
+
+							</p>
+							<div class="text-center">
+								View on
+								<a class="text-white" href="https://etherscan.io/address/0xf27f67CCCDD173DE821B51451468ECfee4AC52dA" target="_blank">Etherscan</a>
+								or
+								<a class="text-white" href="https://etherchain.org/account/0xf27f67CCCDD173DE821B51451468ECfee4AC52dA" target="_blank">etherchain</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--<div class="alert alert-warning text-center" role="alert">
+						<strong>The DADDY crowdsale has finished.</strong> Thanks to everyone who contributed!<br />
+						<small>(Regardless of the fact that none of you read any of the warnings on this page.)</small><br />
+						<small>You can view the token contract and transactions on <a href="https://etherscan.io/address/0xc90841B3661a66C3CC786a9CD1Af012A8387a199" target="_blank">Etherscan</a>.</small>
+					</div>-->
+
+			<div class="row top-20">
+				<div id="stats" style="display: none;">
+					<!--<hr />-->
+					<h2 class="mb-4">Crowdsale Statistics</h2>
+					<div class="row text-center">
+						<div class="col-lg-4">
+							<p class="h4">Ether contributed</p>
+							<p id="total-ether" style="font-size: 2.5em;">—</p>
+							<p id="total-ether-message" class="text-muted"></p>
+						</div>
+						<div class="col-lg-4">
+							<p class="h4">Contributions in USD</p>
+							<p id="total-usd" style="font-size: 2.5em;">—</p>
+							<p id="total-usd-message" class="text-muted"></p>
+						</div>
+						<div class="col-lg-4">
+							<p class="h4">Tokens issued</p>
+							<p id="total-tokens" style="font-size: 2.5em;">—</p>
+							<p id="total-tokens-message" class="text-muted"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id='ico-2' class='section-ico-2 features-2-section'>
+		<div class='container'>
+			<div class='section-header text-center'>
+				<h2 class='wow fadeInUp' data-wow-delay='.2s'>ICO partecipation</h2>
+				<p class='wow fadeInUp' data-wow-delay='.4s'>How to partecipate</p>
+			</div>
+			<div class='row'>
+
+				<div class='col-md-6'>
+					<div class='mockup-text top-20'>
+
+
+						<h2 class="wow fadeInUp" data-wow-delay='.4s'>Token distribution</h2>
+						<p class='wow fadeInUp' data-wow-delay='.6s'>
+							The more Ether
+							<em>everyone</em> contributes, the more tokens
+							<em>you</em> get.
+						</p>
+						<p class='wow fadeInUp' data-wow-delay='.8s'>
+							The base token distribution formula is very simple: for every
+							<strong>1 ETH</strong> you contribute, you'll receive
+							<strong>1000 DDT</strong>, and if you contribute at least
+							<strong>0.01 ETH</strong>, you'll also receive an additional
+							<strong>1 DDT</strong> for every Ether that's been contributed in total. Like this:
+						</p>
+
+						<table class="table wow fadeInUp" data-wow-delay='1s' <thead>
+							<tr>
+								<th>Transaction</th>
+								<th class="text-right">Ether sent</th>
+								<th class="text-right">Total Ether sent</th>
+								<th class="text-right">DDT received</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>#1</td>
+									<td class="text-right">1.000&nbsp;
+										<small>ETH</small>
+									</td>
+									<td class="text-right">1.000&nbsp;
+										<small>ETH</small>
+									</td>
+									<td class="text-right">1001.000&nbsp;
+										<small>DDT</small>
+									</td>
+								</tr>
+								<tr>
+									<td>#2</td>
+									<td class="text-right">3.000&nbsp;
+										<small>ETH</small>
+									</td>
+									<td class="text-right">4.000&nbsp;
+										<small>ETH</small>
+									</td>
+									<td class="text-right">3004.000&nbsp;
+										<small>DDT</small>
+									</td>
+								</tr>
+								<tr>
+									<td>#3</td>
+									<td class="text-right">0.005&nbsp;
+										<small>ETH</small>
+									</td>
+									<td class="text-right">4.005&nbsp;
+										<small>ETH</small>
+									</td>
+									<td class="text-right">5.000&nbsp;
+										<small>DDT</small>
+									</td>
+								</tr>
+								<tr>
+									<td>#4</td>
+									<td class="text-right">0.500&nbsp;
+										<small>ETH</small>
+									</td>
+									<td class="text-right">4.505&nbsp;
+										<small>ETH</small>
+									</td>
+									<td class="text-right">504.505&nbsp;
+										<small>DDT</small>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class='col-md-6'>
+
+					<div class='mockup-text top-20'>
+
+						<h2 class='wow fadeInUp' data-wow-delay='.4s'>Bonus tokens!</h2>
+						<p class='wow fadeInUp' data-wow-delay='.6s'>
+							Every block has a 1 in 256 chance of issuing bonus tokens.
+						</p>
+						<p class='wow fadeInUp' data-wow-delay='.8s'>
+							When purchasing DADDY TOKEN, the smart contract will take a hash of the current block's coinbase, number, and timestamp.
+							If the first byte of the hash is 0x00, the block becomes a
+							<em>bonus block</em>. During a bonus block, the smart contract counts the number of bits set in the second byte of the
+							hash and uses that number as a bonus multiplier.
+						</p>
+						<p class='wow fadeInUp' data-wow-delay='.8s'>
+							Every DADDY purchase of at least
+							<strong>0.01 ETH</strong> worth during the bonus block will receive, in addition to the base distribution, an
+							<strong>additional 100 DDT</strong> per Ether multiplied by the bonus multiplier. That means that contributors have a chance
+							of receiving a total of
+							<em>nine times</em> the number of tokens they expected!
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<section id="roadmap" class="features-2-section">
+		<div class=''>
+			<div class='section-header text-center'>
+				<h2 class='wow fadeInUp' data-wow-delay='.2s'>Roadmap</h2>
+				<p class='wow fadeInUp' data-wow-delay='.4s'> </p>
+			</div>
+			<ul class="timeline wow fadeInUp" data-wow-delay='.8s' id="timeline">
+				<li class="li complete">
+					<div class="timestamp">
+						<span class="author">ICO Start</span>
+						<span class="date">11/12/2017
+							<span>
+					</div>
+					<div class="status">
+						<h4> Running </h4>
+					</div>
+				</li>
+				<li class="li complete">
+						<div class="timestamp">
+							<span class="author">White paper publish</span>
+							<span class="date">21/12/2017
+								<span>
+						</div>
+						<div class="status">
+							<h4> Done </h4>
+						</div>
+					</li>
+				<li class="li">
+					<div class="timestamp">
+						<span class="author">ICO End</span>
+						<span class="date">30/12/2017
+							<span>
+					</div>
+					<div class="status">
+						<h4> Scheduled </h4>
+					</div>
+				</li>
+				<li class="li">
+						<div class="timestamp">
+							<span class="author">Private beta release</span>
+							<span class="date">25/01/2018<span>
+						</div>
+						<div class="status">
+							<h4> Planned </h4>
+						</div>
+					</li>
+				<li class="li">
+						<div class="timestamp">
+							<span class="author">Market Token release</span>
+							<span class="date">31/01/2018<span>
+						</div>
+						<div class="status">
+							<h4> Planned </h4>
+						</div>
+					</li>
+				<li class="li">
+					<div class="timestamp">
+						<span class="author">Beta release</span>
+						<span class="date">28/02/2018
+							<span>
+					</div>
+					<div class="status">
+						<h4> Planned </h4>
+					</div>
+				</li>
+				<li class="li">
+					<div class="timestamp">
+						<span class="author">Stable release</span>
+						<span class="date">31/03/2018
+							<span>
+					</div>
+					<div class="status">
+						<h4> Planned </h4>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	
+	<section id='about' class='features-2-section'>
+		<div class='container'>
+
+			<div class='section-header text-center'>
+				<h2 class='wow fadeInUp' data-wow-delay='.2s'>About Daddy Token</h2>
+				<p class='wow fadeInUp' data-wow-delay='.4s'>What can I do with DDT?</p>
+			</div>
+
+			<div class='row'>
+				<div class='col-md-4'>
+
+					<div class='icon-feature wow fadeInUp' data-wow-delay='.2s'>
+
+						<div class='content'>
+							<h4>Will DDT be traded on any exchanges?</h4>
+							<p>
+								Yes after the ICO end, DDT token will be listed on YOBIT, CRYPTOPIA, COINEXCHANGE and more.
+							</p>
+						</div>
+
+					</div>
+
+				</div>
+				<div class='col-md-4'>
+
+					<div class='icon-feature wow fadeInUp' data-wow-delay='.4s'>
+
+						<div class='content'>
+							<h4>How will you use the funds obtained?</h4>
+							<p>
+								30% for marketing, 50% for development and infrastructure, 20% as a reserve.
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class='col-md-4'>
+
+					<div class='icon-feature wow fadeInUp' data-wow-delay='.6s'>
+
+						<div class='content'>
+							<h4>How do I get a refund for the tokens I bought?</h4>
+							<p>
+								Sorry, there is no refund at the moment.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class='row'>
+
+				<div class='col-md-4'>
+
+					<div class='icon-feature wow fadeInUp' data-wow-delay='.2s'>
+
+						<div class='content'>
+							<h4>When will the app be available?</h4>
+							<p>
+								The Beta version will be released in February, and the official version will be released in March.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class='col-md-4'>
+
+					<div class='icon-feature wow fadeInUp' data-wow-delay='.4s'>
+
+						<div class='content'>
+							<h4>What about Bounty?</h4>
+							<p>
+									At the end of the crowdsale, we will release an amount equal to 10% of the TOKENs to reward as bounty who contributed in our ICO.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class='col-md-4'>
+
+					<div class='icon-feature wow fadeInUp' data-wow-delay='.6s'>
+
+						<div class='content'>
+							<h4>Can I partecipate in the project?</h4>
+							<p>
+								Sure! If you think that your talent can bring something special to the project, you are welcome.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class='mockup'>
+				<img class='shadow wow zoomIn animated' src='img/perspective-shadow.png' alt>
+				<img class='phone wow fadeInDown animated' src='img/perspective-phone.png' alt>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!--======================================================
+			Features Section
+		======================================================-->
+	<section id='features' class='features-section'>
+		<div class='container'>
+
+			<div class='section-header text-center'>
+				<h2 class='wow fadeInUp' data-wow-delay='.2s'>Features</h2>
+				<p class='wow fadeInUp' data-wow-delay='.4s'>We've got a lot of amaing and cool features</p>
+			</div>
+
+			<div class='row'>
+
+				<div class='col-md-4'>
+					<div class='col-features text-right'>
+
+						<div class='col-feature wow fadeInLeft' data-wow-delay='.2s'>
+							<!--<i class="material-icons" style="font-size:48px;color:red">fingerprint</i>-->
+							<i class='fa fa-bell-o'></i>
+							<h4>Price alerts</h4>
+							<p>
+								Set price alerts for each coin
+							</p>
+						</div>
+
+						<div class='col-feature wow fadeInLeft' data-wow-delay='.4s'>
+							<i class='fa fa-line-chart'></i>
+							<h4>Smart trade</h4>
+							<p>
+								Buy and sell at the best value
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class='col-md-4'>
+
+					<div class='mockup wow fadeInUp' data-wow-delay='.2s'>
+						<img src='img/mockup4.png' alt>
+					</div>
+
+				</div>
+
+				<div class='col-md-4'>
+					<div class='col-features text-left'>
+
+						<div class='col-feature wow fadeInRight' data-wow-delay='.2s'>
+							<i class='fa fa-exchange'></i>
+							<h4>Arbitrage</h4>
+							<p>
+								Buy and sell on different market
+							</p>
+						</div>
+
+						<div class='col-feature wow fadeInRight' data-wow-delay='.4s'>
+							<i class='fa fa-twitter'></i>
+							<h4>Social alerts</h4>
+							<p>
+								Be the first to read coin related news
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--======================================================
+			Screenshots Section
+		======================================================-->
+	
+
+	<!--======================================================
+			Download Section
+		======================================================-->
+	<section id='newsletter' class='cta-section parallax' data-parallax='scroll' data-image-src='img/bg.jpg'>
+		<div class='container'>
+
+			<!--======================================================
+					Newsletter Section
+				======================================================-->
+			<div class='newsletter'>
+
+				<h4 class='wow fadeInUp' data-wow-delay='.2s'>Stay Tuned!</h4>
+
+				<div class='row'>
+					<div class='col-md-8 col-md-offset-2'>
+						<!--<script type="text/javascript" async src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: true"></script>
+							<script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"4a32a12ba9606c79cfd1e5327","lid":"ed8646f719"}) })</script>
+							-->
+						<!-- Newsletter Form -->
+						<form class='newsletter-form' method='post' action='//mc.us17.list-manage.com/subscribe/post?u=4a32a12ba9606c79cfd1e5327&id=ed8646f719'>
+
+							<div class='subscribe-input wow fadeInUp' data-wow-delay='.4s'>
+								<input autocomplete="off" class='txt' type='email' id='newsletter-email' name='email' placeholder='Your Email'>
+								<span></span>
+								<button class='subscribe' type='submit'>Subscribe</button>
+							</div>
+
+							<label for='newsletter-email'></label>
+
+						</form>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!--======================================================
+			Footer
+		======================================================-->
+	<footer>
+		<div class='container'>
+			<div class='row'>
+
+				<div class='col-sm-6'>
+					<p class='wow fadeInLeft' data-wow-delay='.2s'>
+						&copy; 2017 DaddyToken. All Rights Reserved.
+					</p>
+				</div>
+
+				<div class='col-sm-6'>
+
+					<!-- Footer Social Icons -->
+					<ul class='footer-social wow fadeInRight' data-wow-delay='.2s'>
+						<li>
+							<a href="https://www.trackico.io/"
+							target="_blank"
+							title="TrackICO">
+							 <img border="0"
+								  src="https://www.trackico.io/static/img/partner_logo_white.png"
+								  alt="TrackICO - provider of information about the best ICOs"
+								  height="25px">
+						 </a>
+						</li>
+						
+						<li>
+							<a href='https://t.me/DaddyToken'>
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJtSURBVDhPxZRLbxJRGIZnpVV/gYmJlwAtKg2pLUVaOiTGjXHn1pV/QH+Abrpw61K7MmnkTqG0ck9tGmMTGpUYrbHlMghzaSnEjJSbRT7PYQ5lJhKgG32TJ2TOec/Dl2EY6r+EXmdG6DA3Rkf3jO1PdE22Th46JljoGO+3RIWqJSZAB7ReoaP8siXK06Q6OLcjwrm5CO9AwCDMEd56Y4U7S472Di7Mhri4OYwODMlsmN/sKzaFONdMiIOTYgqyVqJQZjqUt9wMsjCIu2sCPN8R4V2hplhHA5mJqhtDIO+fDrDQC3zo4VYR1oUqHLVagPOhWFf2Xud9RCUFPyZTq/mqYTUPcu7EeFj4JoJQbbZFtV9NOCg3AGtt6bKia1jNVVTB3dNESVFTAVYzuZIDDNqER/ED2EBT/ZaGAjzcnlgHXqxJCyhPPhbbfTnYQ5QUpfdlTRP+HGDmE6VjGc5howk7+2XY/1knK1LuvRHafTnYQ5QUNe5lNfrl79DhVoiFp59KsF2owGdOhFKlQVRSqs0WknT7HbCHKCnq4ktmROdjquO+LMh5liiAe7sIhcoR0UlJlOqKHkbnZZT3FOe6h1nWLTEg5/4aCwtbHLyIs/D1R3daa0pU9CQyyl8fR+vJzF3zMCBHv5SF+bcsGH0MTKBplphyW/r4/YGiJ5GdISpltK6MTevOQD8ebAgwib5AvjbmTi8Sxd/B/2GNM7056krDsOD+wJfKeVRQO1OvUBkf6IvakVq84MydIUcHR21Pm1X2pFdlS1ZU9hQc075Oeq84Ur3v4TDBj8klZ2ZU5dg1XranNVddX06RrX8ZivoDB78R8ipRI/AAAAAASUVORK5CYII=">
+							</a>
+						</li>
+						<li>
+							<a href='https://twitter.com/DaddyToken'>
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhP7ZOvT8NAHMUvd1cCFhI8QSIwJIQfQeEQGCwhSAxmggSBQJBgCWaC4Na7koFG4wgJDoLiLyBZezcQQMtb+QZW7rp1BrVP8s26u/deX3otGzI49SygqwqErWkWZSP0z0FouyaUfRTKpLh+EjrZkGG8yJXdJokLxGdcmyt2no3S0g+y0Z7D/jvCssIo+8K13WOX8QRJi0AUkfhBRskyLedg7YT2/oSaFEV2SeaCO251G7gyd5gajKswXnfv/WrsDdn9iLC9jpB7n7lsUKRJdj9odOgz9hx4yF6Cbo3np+szl4zUrwvkLkeqZKnqI8BzviVbb4KGmUFb4wspjDIfKLBCtv4Eys7iVC9gjp0wGhzQAckrgi8LbU87bdxA84nAfVL2Qadj+TupzbMb9D2ddxJf1jw5BqBpJtFkE+HHaFrH7xHXyQ7Tb1OkGPLvMPYFX7hraRO5h/UAAAAASUVORK5CYII=">
+							</a>
+						</li>
+						<li>
+							<a href='https://discord.gg/3nNWUF5'>
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHASURBVDhP7VMxLwRBGF0KP0BEoaBRSEQjEolo/A1CkPATUJClw+4dhYLYmUOpQSJqhehFR04ioRBCIUTIfeO92Tl3t7eHH3Av+TIz773vzezOrldHFYwxDdlI+lZzMuX7ptHRFlyHykwHSvrpc3Rt0JRRMhZocxoqWeAcAXOhlmygZYsj1wicwNynL8jJ6K/hMEZoziPwEONrqI2pVVaPfXn2uYhKhDnTBbGAU0haSK2K/VLIbEuniyoB4mZa038LJ95wUTHily8Paeb/l9xXvFveZNKEnT/AH9BcwSu5I0+9nGetaOl1kQw1i0lDGJlxaiuRtCHknRxHrsljs8lkDzaap2YBw3HSkN2Rbid7MF9bXsmVo7yMlp5kD3xHTkaoktukARut2e82kiHMC44rcE2eekrPjQ20l6Tlq9qAUvKMR674xLhGvZRzP5qWT3tZwZ60lgR5Q52j3Mn+KviUnMV9jtsyLfa02GG2GIT5I+ZLOM06Gi7STkoeHjy++Jg/xZrdYMYGFoF/ehDCiRVj0yX+kmZ/3zTxxnlxHLkmT/0nLO4bcFHVCCLpWNUyHEYy4qhUUKdvede0O6oOwvO+AWEI0huRXYvyAAAAAElFTkSuQmCC">
+							</a>
+						</li>
+						<li>
+							<a href='https://bitcointalk.org/index.php?topic=2570438.0'>
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHNSURBVDhPxVTPLwNBFJ7T7pY48Bc40RMJF6kUf4Y4uDs4OHB34uSPEBpxoC4Sp/4gTZs2hCihJMpF4oY2TvN5b2a23dm2VCR8yZfJvP3et2/fm1nxL0BKeEg5UZmKTPDKe/Po50DKnZEZ90Cm3ToyLnzSvkZMyqw3baTfQx6JXkraCRp1Ir10GyXRY1LbgwVkWLCSTwaA0jhw3KdX3geey4yT+9KYRLvBBMXTGPBRBfKDeuV9SMMVGwsb3MOwGPcrwGtRm73l9PqcAIqjto4o017cWDXBQwkLUV3TRg+rQGURuFsG3s+JZ9SGfktLbds3Vhp8TChoTVnRNy2ONGOP6zpWGrO0lF+Th8I1llRl1hkKChr0TbnC63ngdkFXqSq1B8ZkH2PJn+7FwgJF37RWJqMLoH5jXrLUqiWyj7HsotLG50eApw0dO43bWqJV6Y96Wp7Vsas5S9vSUwYFk0GRom/qT18dsTy1oQIUopaW8u3pM6gfU0GRYrtz+pIEztp9ujdprGzQWU2Exd3dKGfTWLRC3X2+y8Gk3959hvmpbAUTO5ErlDkRManfg+8ytWOPp2oZ8ZQ53qmH3YCPiTxxhvnPr87zpXDMo7+EEJ/oWQ2tV3t8CgAAAABJRU5ErkJggg==">
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--======================================================
+			JavaScript Files
+		======================================================-->
+	<script src='js/jquery.min.js'></script>
+	<script src='bootstrap/js/bootstrap.min.js'></script>
+	<script src='js/jquery.magnific-popup.min.js'></script>
+	<script src='js/jquery.ajaxchimp.min.js'></script>
+	<script src='js/parallax.min.js'></script>
+	<script src='js/particles.min.js'></script>
+	<script src='js/waves.min.js'></script>
+	<script src='js/owl.carousel.min.js'></script>
+	<script src='js/wow.min.js'></script>
+	<script src='js/validator.min.js'></script>
+	<script src='js/smooth-scroll.min.js'></script>
+	<script src='js/script.js'></script>
+
+</body>
+
+</html>
